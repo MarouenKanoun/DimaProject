@@ -1,3 +1,5 @@
+
+
 <ion-content>
   <div class="main_content_div">
 
@@ -6,16 +8,28 @@
     <div class="shape_div2"></div>
 
     <!-- <img src="assets/imgs/car.png" class="logo_image"> -->
-    <ion-label class="protitle">Carpool</ion-label>
+    <ion-label class="protitle">Dima</ion-label>
     <ion-label class="head_lbl">Sign Up</ion-label>
 
     <div class="form_div">
-      <ion-input type="text" placeholder="First Name"></ion-input>
-      <ion-input type="text" placeholder="Last Name"></ion-input>
-      <ion-input type="text" placeholder="Email ID"></ion-input>
-      <ion-input type="text" placeholder="Password"></ion-input>
-      <ion-input type="text" placeholder="Mobile No"></ion-input>
-      <ion-button class="login_btn" expand="block" (click)="goToRides()">Sign Up</ion-button>
+
+     
+        <ion-input   [(ngModel)]="RegisterForm.username" name="text"type="text"  placeholder="First Name"></ion-input>
+        <ion-input [(ngModel)]="RegisterForm.email"   name="text"type="text" placeholder="Email"></ion-input>
+        <ion-input   [(ngModel)]="RegisterForm.password"  name="text"type="text" placeholder="Password"></ion-input>
+        <ion-input    [(ngModel)]="RegisterForm.confirm_password" name="text"type="text" placeholder="Confirm Password"></ion-input>
+        <ion-input  *ngIf="hide"   [(ngModel)]="RegisterForm.name"  type="text" value="" name="name"  placeholder="Nom station "></ion-input>
+        <ion-input  *ngIf="hide"  [(ngModel)]="RegisterForm.adresse" name="adresse"  name="text"type="text" placeholder="Adresse"></ion-input>
+     
+
+
+      <ion-button class="login_btn" expand="block" (click)="goToHome()">Sign Up</ion-button>
+        <!-- <ion-button class="login_btn" expand="block" (click)="register()">Sign Up</ion-button> -->
+
+      <ion-item>
+  <ion-label> Vous possedez une station ?</ion-label>
+  <ion-checkbox [(ngModel)]="isCustumer" (ionChange)="onMyBooleanChange()" checked="false"> </ion-checkbox>
+</ion-item>
     </div>
 
     <ion-button class="bottom_lbl" (click)="goToLogin()" expand="block" fill="clear">

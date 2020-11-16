@@ -40,6 +40,21 @@ export class AuthService {
       );
       
   }
+
+  RegisterStation(postData){
+  let type='application/json;charset=UTF-8';
+  let headers=new Headers({'Content-Type':type})
+  let options=new RequestOptions({headers:headers});
+ return this.http.post("https://station-de-service.myestimators.com/api/station/", postData, options).map(res=>
+     res.json()
+  ,err=>{
+console.log(err);
+
+  })
+
+
+
+}
   
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
