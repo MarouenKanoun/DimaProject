@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" color="dark" mode="md"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="upper_div">
+      <ion-label class="stop_lbl">Do you wants to add Stopovers?</ion-label>
+      
+      <div style="overflow: scroll;">
+        <div class="list_div" *ngFor="let item of stopovers">
+          <ion-label style="font-family: 'semi-bold'; font-size: 13px;">{{item}}</ion-label>
+          <ion-checkbox slot="end" mode="md"></ion-checkbox>
+        </div>
+      </div>
+
+    </div>
+    <div class="lower_div">
+      <ion-input type="text" placeholder="Add stopovers and get more co-travellers"></ion-input>
+      <ion-button (click)="goToStopoversList()" expand="block" shape="round">
+        Confirm
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

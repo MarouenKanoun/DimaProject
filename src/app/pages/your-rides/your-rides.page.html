@@ -1,0 +1,88 @@
+<ion-header>
+  <!-- <div class="header_div">
+    <ion-label>Your Rides</ion-label>
+  </div> -->
+  <ion-toolbar color="warning">
+    <ion-title color="light">Your Rides</ion-title>
+  </ion-toolbar>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6" (click)="segmentChange(1)" [class.active]="seg_id == 1">Current</ion-col>
+      <ion-col size="6" (click)="segmentChange(2)" [class.active]="seg_id == 2">history</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <div class="div_current" *ngIf="seg_id == 1">
+
+      <div class="card_div" *ngFor="let iten of [1,2,3]" (click)="goToDetail(seg_id)">
+        <div class="upper_div">
+          <div style="width: 50%;">
+            <ion-label class="small">Thursday</ion-label>
+            <ion-label class="bold_lbl">22-feb-2020</ion-label>
+          </div>
+          <div style="width: 50%;">
+            <ion-label class="small">Time</ion-label>
+            <ion-label class="bold_lbl">02:00 PM</ion-label>
+          </div>
+        </div>
+
+        <div class="lower_div">
+          <div class="up_div">
+            <div class="flex_div">
+              <img src="assets/imgs/radio.png" class="radio_img">
+              <ion-label class="loc_lbl">134 Williamst, Choicago, US</ion-label>
+            </div>
+
+            <div class="flex_div" style="align-items: center;">
+              <img src="assets/imgs/lines.png" class="line_img">
+            </div>
+
+            <div style="display: flex;margin-top: 10px;">
+              <img src="assets/imgs/pin.png" class="radio_img">
+              <ion-label class="loc_lbl">134 Williamst, Choicago, US</ion-label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="div_current" *ngIf="seg_id == 2">
+
+      <div class="card_div" *ngFor="let iten of [1,2,3]" (click)="goToDetail(seg_id)">
+        <div class="upper_div">
+          <div style="width: 50%;">
+            <ion-label class="small">Thursday</ion-label>
+            <ion-label class="bold_lbl">22-feb-2020</ion-label>
+          </div>
+          <div style="width: 50%;">
+            <ion-label class="small">Time</ion-label>
+            <ion-label class="bold_lbl">02:00 PM</ion-label>
+          </div>
+        </div>
+
+        <div class="lower_div">
+          <div class="up_div">
+            <div class="flex_div">
+              <img src="assets/imgs/radio.png" class="radio_img">
+              <ion-label class="loc_lbl">134 Williamst, Choicago, US</ion-label>
+            </div>
+
+            <div class="flex_div" style="align-items: center;">
+              <img src="assets/imgs/lines.png" class="line_img">
+            </div>
+
+            <div style="display: flex;margin-top: 10px;">
+              <img src="assets/imgs/pin.png" class="radio_img">
+              <ion-label class="loc_lbl">134 Williamst, Choicago, US</ion-label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

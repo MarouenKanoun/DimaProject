@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" color="dark" mode="md"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="upper_div">
+      <ion-label class="head_lbl">Great! Here are the most popular places to stop in these locations</ion-label>
+
+      <div class="locations_div">
+        <div class="left_div">
+          <span *ngFor="let item of locations; let i = index" style="height: 65px;display: block;">
+            <div class="round_div" [class.color_div]="item.id == '1' || item.id == locations.length"></div>
+            <div class="line_div" *ngIf="locations.length != i+1"></div>
+          </span>
+        </div>
+
+        <div class="right_div">
+          <span *ngFor="let item of locations; let i = index" style="height: 65px;display: block;">
+            <ion-label style="display: block;" [class.color_lbl]="item.id == '1' || item.id == locations.length">
+              {{item.loc}}</ion-label>
+            <ion-label>{{item.city}}</ion-label>
+            <!-- <div class="line_div"></div> -->
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lower_div">
+      <ion-button (click)="goToBookingSlider()" shape="round" expand="block">
+        Confirm
+      </ion-button>
+    </div>
+
+  </div>
+</ion-content>

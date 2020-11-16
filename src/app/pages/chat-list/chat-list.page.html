@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>chats</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <div class="list_div" *ngFor="let item of [1,2,3,4,5,6]">
+      <div class="user_image" [style.backgroundImage]="'url(assets/imgs/user.jpg)'"></div>
+      <div class="content_div" (click)="goToInbox()">
+        <ion-label class="username">Jonh Doe</ion-label>
+        <ion-label class="msg">Hello</ion-label>
+      </div>
+      <ion-label class="time_lbl">07: 00 pm</ion-label>
+    </div>
+  </div>
+</ion-content>

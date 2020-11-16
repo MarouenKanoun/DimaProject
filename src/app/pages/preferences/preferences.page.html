@@ -1,0 +1,81 @@
+<!-- <ion-header>
+  <div class="header_div">
+    <ion-buttons slot="start" style="position: absolute;left: 16px">
+      <ion-back-button text="" color='light' mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-label>Preferances</ion-label>
+  </div>
+</ion-header> -->
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">Preferances</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="flex_div">
+      <img src="assets/imgs/msg.png">
+      <div class="nxt_div">
+        <ion-label>Chattiness</ion-label>
+        <ion-select placeholder="Select One">
+          <ion-select-option>I am the quit type</ion-select-option>
+          <ion-select-option>I talk depending on my mood</ion-select-option>
+          <ion-select-option>I love to chat</ion-select-option>
+        </ion-select>
+      </div>
+    </div>
+
+    <div class="line_div"></div>
+
+    <div class="flex_div">
+      <img src="assets/imgs/smoke.png">
+      <div class="nxt_div">
+        <ion-label>Smoking</ion-label>
+        <ion-select placeholder="Select One">
+          <ion-select-option>No smoking in car please</ion-select-option>
+          <ion-select-option>Don't know</ion-select-option>
+          <ion-select-option>Cigaratte smoke doesn't nothr me</ion-select-option>
+        </ion-select>
+      </div>
+    </div>
+
+    <div class="line_div"></div>
+
+    <div class="flex_div">
+      <img src="assets/imgs/music.png">
+      <div class="nxt_div">
+        <ion-label>Music</ion-label>
+        <ion-select placeholder="Select One">
+          <ion-select-option>Silence id golden</ion-select-option>
+          <ion-select-option>Don't know</ion-select-option>
+          <ion-select-option>It's all about the playlist</ion-select-option>
+        </ion-select>
+      </div>
+    </div>
+
+    <div class="line_div"></div>
+
+    <div class="flex_div">
+      <img src="assets/imgs/pet.png">
+      <div class="nxt_div">
+        <ion-label>Pets</ion-label>
+        <ion-select placeholder="Select One">
+          <ion-select-option>No pets please</ion-select-option>
+          <ion-select-option>Don't know</ion-select-option>
+          <ion-select-option>pets welcome. WOOF!</ion-select-option>
+        </ion-select>
+      </div>
+    </div>
+
+    <div class="line_div"></div>
+
+    <ion-button (click)="onClick()" expand="block" shape="round">
+      Save Preferences
+    </ion-button>
+
+  </div>
+</ion-content>

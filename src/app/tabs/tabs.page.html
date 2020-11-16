@@ -1,0 +1,40 @@
+<ion-tabs (ionTabsDidChange)="tabChange($event)">
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="tab1">
+      <img src="assets/tabs/car_active.png" *ngIf="selectTab == 'tab1'" class="tab_img">
+      <img src="assets/tabs/car_gray.png" *ngIf="selectTab != 'tab1'" class="tab_img">
+      <ion-label class="lbl_active" *ngIf="selectTab == 'tab1'">Rides</ion-label>
+      <ion-label class="lbl_gray" *ngIf="selectTab != 'tab1'">Rides</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab2">
+      <img src="assets/tabs/search_active.png" *ngIf="selectTab == 'tab2'" class="tab_img">
+      <img src="assets/tabs/search_gray.png" *ngIf="selectTab != 'tab2'" class="tab_img">
+      <ion-label class="lbl_active" *ngIf="selectTab == 'tab2'">Search</ion-label>
+      <ion-label class="lbl_gray" *ngIf="selectTab != 'tab2'">Search</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab3">
+      <img src="assets/tabs/add_active.png" *ngIf="selectTab == 'tab3'" class="tab_img">
+      <img src="assets/tabs/add_gray.png" *ngIf="selectTab != 'tab3'" class="tab_img">
+      <ion-label class="lbl_active" *ngIf="selectTab == 'tab3'">Offer</ion-label>
+      <ion-label class="lbl_gray" *ngIf="selectTab != 'tab3'">Offer</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab4">
+      <img src="assets/tabs/chat_active.png" *ngIf="selectTab == 'tab4'" class="tab_img">
+      <img src="assets/tabs/chat_gray.png" *ngIf="selectTab != 'tab4'" class="tab_img">
+      <ion-label class="lbl_active" *ngIf="selectTab == 'tab4'">Inbox</ion-label>
+      <ion-label class="lbl_gray" *ngIf="selectTab != 'tab4'">Inbox</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab5">
+      <img src="assets/tabs/user_active.png" *ngIf="selectTab == 'tab5'" class="tab_img">
+      <img src="assets/tabs/user_gray.png" *ngIf="selectTab != 'tab5'" class="tab_img">
+      <ion-label class="lbl_active" *ngIf="selectTab == 'tab5'">Profile</ion-label>
+      <ion-label class="lbl_gray" *ngIf="selectTab != 'tab5'">Profile</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

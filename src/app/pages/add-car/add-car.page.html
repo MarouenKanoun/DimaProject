@@ -1,0 +1,45 @@
+<!-- <ion-header>
+  <div class="header_div">
+    <ion-buttons slot="start" style="position: absolute;left: 16px">
+      <ion-back-button text="" color='light' mode='md'></ion-back-button>
+    </ion-buttons>
+    <ion-label>Car Detail</ion-label>
+  </div>
+</ion-header> -->
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">Car Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <ion-label class="head_lbl">What's your number plate ?</ion-label>
+    <ion-label class="small_lbl">We'll only share it with passangers who book with you.</ion-label>
+
+    <div class="form_div">
+      <ion-label class="head_lbl1">Country</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option>India</ion-select-option>
+        <ion-select-option>Canada</ion-select-option>
+        <ion-select-option>Dubai</ion-select-option>
+      </ion-select>
+
+      <ion-label class="head_lbl1">Number Plate</ion-label>
+      <ion-input type="text" placeholder="Number"></ion-input>
+
+      <ion-button (click)="goToCarInfo()" expand="block" class="continue_btn" shape="round">
+        Continue
+      </ion-button>
+
+      <ion-button (click)="Skip()" class="skip_btn" expand="block" fill="clear">
+        Skip
+      </ion-button>
+    </div>
+
+
+  </div>
+</ion-content>

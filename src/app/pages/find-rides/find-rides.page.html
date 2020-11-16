@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="upper_div">
+
+      <ion-label class="head_lbl">Where would you like to drop off Passengers?</ion-label>
+      <div class="search_div">
+        <ion-searchbar placeholder="Why is an exact location better ?" showCancelButton="never"
+          (ionInput)="onSearchChange1($event)" autocomplete="on" showCancelButton="never" mode="ios"
+          [(ngModel)]="autocomplete1.query">
+        </ion-searchbar>
+        <img src="assets/imgs/aim.png" class="current_img">
+      </div>
+
+      <ion-list>
+        <ion-item *ngFor="let item of autocompleteItems1" (click)="selectSearchResult1(item)">
+          {{ item }}
+        </ion-item>
+      </ion-list>
+
+      <ion-searchbar placeholder="e.g. Manchester Picadilly" showCancelButton="never"
+        (ionInput)="onSearchChange2($event)" autocomplete="on" showCancelButton="never" mode="ios"
+        [(ngModel)]="autocomplete2.query">
+      </ion-searchbar>
+    </div>
+
+    <ion-list>
+      <ion-item *ngFor="let item of autocompleteItems2" (click)="selectSearchResult2(item)">
+        {{ item }}
+      </ion-item>
+    </ion-list>
+
+    <div class="lower_div">
+      <div #map id="map" class="map">
+      </div>
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button color="warning" (click)="addStops()">
+          <ion-icon color="light" name="arrow-forward-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </div>
+  </div>
+</ion-content>

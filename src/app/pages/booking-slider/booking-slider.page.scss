@@ -1,0 +1,151 @@
+ion-toolbar{
+    --background: var(--ion-color-main);
+}
+.header_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 50px;
+    
+    background: var(--ion-color-main);
+    ion-label{
+        font-family: 'semi-bold';
+    }
+}
+.main_content_div{
+    width: 100%;
+    .stepper_div{
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        // justify-content: space-between;
+
+        .div_step{
+            width: 33%;
+            display: flex;
+            align-items: center;
+
+            .round_div{
+                width: 20px;
+                height: 20px;
+                background: lightgray;
+                border-radius: 50%;
+                position: relative;
+            }
+            .line_div{
+                width: 83%;
+                height: 3px;
+                background: lightgray;
+            }
+            .line_div2{
+                width: 67%;
+                height: 3px;
+                background: lightgray;
+            }
+            .check_icn{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                font-size: 15px;
+                color: lightgray;
+            }
+
+            .active_round{
+                background: var(--ion-color-main2) !important;
+            }
+            .active_icn{
+                color: white;
+            }
+        }
+    }
+
+    .cal_header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .div_inner_slider{
+        width: 100%;
+        padding: 20px;
+
+        .month_lbl{
+            color: black;
+            font-size: 12px;
+            font-family: 'bold';
+        }
+
+        .head_lbl{
+            display: block;
+            text-align: left;
+            font-family: 'bold';
+            font-size: 22px;
+        }
+        .nxt_btn{
+            --background: var(--ion-color-main);
+            font-family: 'semi-bold';
+        }
+        ion-datetime{
+            background: #F0F0F0;
+            border-radius: 25px;
+            display: block;
+            width: 70%;
+            margin: auto;
+            font-family: 'semi-bold';
+            font-size: 24px;
+        }
+
+        .seat_div{
+            width: 70%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+        .add_btn{
+            font-size: 25px;
+            color: var(--ion-color-main2);
+        }
+        .ip{
+            font-family: 'bold';
+            font-size: 30px;
+        }
+        .simple_lbl{
+            display: block;
+            text-align: center;
+        }
+        .price_lbl{
+            margin-top: 10px;
+            font-size: 40px;
+            font-family: 'semi-bold';
+            display: block;
+            text-align: center;
+        }
+        .ip_lbl{
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            width: 150px;
+            font-family: 'semi-bold';
+            font-size: 40px;
+            margin: auto;
+            margin-top: 10px;
+        }
+        .loc_div{
+            margin-top: 10px;
+            font-size: 14px;
+            color: var(--ion-color-main2);
+
+            ion-label{
+                font-family: 'semi-bold';
+            }
+        }
+        .agree_btn{
+            color: var(--ion-color-main2);
+            font-family: 'semi-bold';
+        }
+    }
+}

@@ -1,0 +1,46 @@
+ion-toolbar{
+    --background: linear-gradient(to right, var(--ion-color-main), var(--ion-color-main2));
+    color: white;
+}
+.main_content_div{
+    width: 100%;
+
+    .list_div{
+        display: flex;
+        flex-direction: row;
+        padding: 10px 20px;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        border-bottom: 1px solid lightgray;
+
+        .user_image{
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .content_div{
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+
+            .username{
+                font-family: 'semi-bold';
+            }
+            .msg{
+                font-size: 12px;
+            }
+        }
+        .time_lbl{
+            font-size: 10px;
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+            font-family: 'semi-bold';
+        }
+    }
+}

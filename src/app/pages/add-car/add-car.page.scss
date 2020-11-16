@@ -1,0 +1,53 @@
+.header_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 50px;
+    
+    background: linear-gradient(to right, var(--ion-color-main), var(--ion-color-main2));
+    ion-label{
+        font-family: 'semi-bold';
+    }
+}
+
+.main_content_div{
+    width: 100%;
+    padding: 20px;
+
+    .form_div{
+        margin-top: 100px;
+
+        .head_lbl1{
+            font-family: 'semi-bold';
+            margin-top: 10px;
+        }
+    }
+
+    ion-label{
+        display: block;
+        margin-bottom: 10px;
+    }
+    .head_lbl{
+        font-family: 'semi-bold';
+    }
+    .small_lbl{
+        color: gray;
+    }
+    ion-select{
+        padding: 0px;
+    }
+    ion-input{
+        border-bottom: 2px solid lightgray;
+    }
+    .continue_btn{
+        --background: linear-gradient(to right, var(--ion-color-main), var(--ion-color-main2));
+        margin-top: 20px;
+        font-family: 'semi-bold';
+    }
+    .skip_btn{
+        margin-top: 20px;
+        font-family: 'semi-bold'; 
+        color: var(--ion-color-main2);
+    }
+}

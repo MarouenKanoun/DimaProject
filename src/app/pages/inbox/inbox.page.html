@@ -1,0 +1,49 @@
+<!-- <ion-header>
+  <div class="header_div">
+    <ion-buttons slot="start" style="position: absolute;left: 16px">
+      <ion-back-button text="" color='light' mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-label>Mausam Chavda</ion-label>
+  </div>
+</ion-header> -->
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">John Doe</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="main_content_div">
+    <div class="lower_div">
+      <span *ngFor="let msg of messages">
+        <div class="main_div_right" *ngIf="msg.side == 'right'">
+          <div class="msg_div">
+            <div class="inner_msg">
+              {{msg.msg}}
+            </div>
+          </div>
+          <div class="tri_right"></div>
+        </div>
+
+        <div class="main_div_left" *ngIf="msg.side == 'left'">
+          <div class="msg_div">
+            <div class="inner_msg">
+              {{msg.msg}}
+            </div>
+          </div>
+          <div class="tri_left"></div>
+        </div>
+      </span>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <div class="footer_div">
+      <ion-input type="text" placeholder="Type a message.."></ion-input>
+      <ion-icon class="send_btn" name="send-sharp"></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-footer>

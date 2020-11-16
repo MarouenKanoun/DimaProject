@@ -1,0 +1,49 @@
+.main_content_div{
+    width: 100%;
+    height: 90vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .upper_div{
+        height: 80vh;
+
+        .stop_lbl{
+            display: block;
+            font-family: 'semi-bold';
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .list_div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 15px 5px;
+        }
+
+        ion-checkbox{
+            --background-checked: var(--ion-color-main);
+            --border-color : var(--ion-color-main2);
+            --border-color-checked : var(--ion-color-main);
+        }
+    }
+    .lower_div{
+        height: 15vh;
+        align-items: flex-end;
+
+        ion-input{
+            border-bottom: 2px solid var(--ion-color-main);
+            margin-bottom: 10px;
+            font-family: 'semi-bold';
+            font-size: 15px;
+        }
+        ion-button{
+            --background: var(--ion-color-main);
+            font-family: 'semi-bold';
+        }
+
+    }
+    
+}

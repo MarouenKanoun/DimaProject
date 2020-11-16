@@ -1,0 +1,40 @@
+<ion-content>
+  <div class="main_content_div">
+
+
+    <div class="shape_div1"></div>
+    <div class="shape_div2"></div>
+
+    <!-- <img src="assets/imgs/car.png" class="logo_image"> -->
+    <ion-label class="protitle">Carpool</ion-label>
+    <ion-label class="head_lbl">LOGIN</ion-label>
+
+    <form >
+    <div class="form_div">
+      <ion-input  [(ngModel)]="authForm.email"  name="email"  type="text" placeholder="Email ID"></ion-input>
+      <ion-input  [(ngModel)]="authForm.password" name="password" type="text" placeholder="Password"></ion-input>
+
+      <ion-label class="forgot_lbl" (click)="goToForgot()">Forgot Passsword ?</ion-label>
+
+      <ion-button type="submit" class="login_btn" expand="block" (click)="login()">LOGIN</ion-button>
+
+      <ion-label class="or_lbl">Or Login with</ion-label>
+
+      <div class="social_btn_div">
+        <ion-button class="fb_btn" fill="clear">
+          <ion-icon name="logo-facebook" class="fb_icn" style="margin-right: 5px;"></ion-icon>Facebook
+        </ion-button>
+
+        <ion-button class="google_btn" fill="clear">
+          <ion-icon name="logo-google" class="gp_icn" style="margin-right: 5px;"></ion-icon>Google
+        </ion-button>
+      </div>
+    </div>
+    </form>
+
+    <ion-button class="bottom_lbl" (click)="goToRegister()" expand="block" fill="clear">
+      Create New Account
+    </ion-button>
+
+  </div>
+</ion-content>

@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" mode="md"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <div class="car_image" [style.backgroundImage]="'url(assets/imgs/suv.jpg)'"></div>
+
+    <ion-searchbar 
+      placeholder="Company" 
+      (ionInput)="onSearchCompany($event)" 
+      showCancelButton="never"
+      [(ngModel)]="company"
+    >
+    </ion-searchbar>
+
+    <span *ngIf="company">
+      <ion-list *ngFor="let item of car_company" (click)="selectCompany(item)">
+        <ion-item>
+          <ion-label>{{item}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </span>
+
+    <ion-searchbar 
+      placeholder="Type" 
+      (ionInput)="onSearchModel($event)" 
+      showCancelButton="never"
+      [(ngModel)]="type"
+    >
+    </ion-searchbar>
+
+    <span *ngIf="type">
+      <ion-list *ngFor="let item of car_type" (click)="selectType(item)">
+        <ion-item>
+          <ion-label>{{item}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </span>
+
+    <ion-select placeholder="Color" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="brown">Brown</ion-select-option>
+      <ion-select-option value="blonde">Blonde</ion-select-option>
+      <ion-select-option value="black">Black</ion-select-option>
+      <ion-select-option value="red">Red</ion-select-option>
+    </ion-select>
+
+    <ion-input type="tel" placeholder="Register Year"></ion-input>
+
+    <ion-button (click)="onClick()" expand="block">
+      Submit
+    </ion-button>
+  </div>
+</ion-content>

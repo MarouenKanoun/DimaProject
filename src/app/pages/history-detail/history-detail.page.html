@@ -1,0 +1,132 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>History Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+
+    <div class="card_div">
+      <div class="resto_detail">
+        <div class="back_image" [style.backgroundImage]="'url(assets/imgs/user.jpg)'"></div>
+        <div style="margin-left: 10px;">
+          <ion-label class="res_name">Jonh Doe</ion-label>
+          <ion-label class="res_location">07-March-2020</ion-label>
+        </div>
+
+        <div class="order_id">
+          <ion-label>Time</ion-label>
+          <ion-label>07: 00 PM</ion-label>
+        </div>
+      </div>
+    </div>
+
+    <div class="line_div"></div>
+
+
+    <div class="card_div2">
+      <div class="personal_detail">
+        <div style="display: flex;">
+          <ion-icon name="call"></ion-icon>&nbsp;&nbsp;
+          <ion-label class="res_name">9876543213</ion-label>
+        </div>
+        <div>
+          <ion-button (click)="onClick()" size="small" fill="outline">Call</ion-button>
+        </div>
+      </div>
+    </div>
+
+    <div class="line_div"></div>
+
+    <div class="card_div2">
+      <div class="personal_detail">
+        <div style="display: flex;">
+          <ion-icon name="mail"></ion-icon>&nbsp;&nbsp;
+          <ion-label class="res_name">jonh@gmail.com</ion-label>
+        </div>
+        <div>
+          <ion-button (click)="onClick()" size="small" fill="outline">Email</ion-button>
+        </div>
+      </div>
+    </div>
+
+    <div class="line_div"></div>
+
+    <div class="card_div2" style="padding-top: 18px;padding-bottom: 18px">
+      <div class="personal_detail">
+        <div style="display: flex;">
+          <ion-icon name="car-sport-outline"></ion-icon>&nbsp;&nbsp;
+          <ion-label class="res_name">3 Seats</ion-label>
+        </div>
+        <div>
+        </div>
+      </div>
+    </div>
+
+    <div class="line_div"></div>
+
+    <div class="card_div2" style="padding-top: 18px;padding-bottom: 18px">
+      <div class="personal_detail">
+        <div style="display: flex;">
+          <ion-icon name="cash-outline"></ion-icon>&nbsp;&nbsp;
+          <ion-label class="res_name" style="font-weight: 600;">1500</ion-label>
+        </div>
+        <div>
+        </div>
+      </div>
+    </div>
+
+    <div class="line_div"></div>
+
+    <div class="lower_div">
+      <div class="up_div">  
+        <div class="flex_div">
+          <img src="assets/imgs/radio.png" class="radio_img">
+          <ion-label class="loc_lbl">134 Williamst, Choicago, US</ion-label>
+        </div>
+  
+        <div class="flex_div" style="align-items: center;">
+          <img src="assets/imgs/lines.png" class="line_img">
+        </div>
+  
+        <div style="display: flex;margin-top: 10px;">
+          <img src="assets/imgs/pin.png" class="radio_img">
+          <ion-label class="loc_lbl">134 Williamst, Choicago, US</ion-label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="line_div"></div>
+
+
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="status_div" *ngIf="id == 1">
+      <div style="width: 200px;">
+        <ion-select placeholder="Choose Status">
+          <ion-select-option value="Accepted">Accepted</ion-select-option>
+          <ion-select-option value="Completed">Completed</ion-select-option>
+          <ion-select-option value="Rejected">Rejected</ion-select-option>
+        </ion-select>
+      </div>
+
+      <div>
+        <ion-button (click)="changeOrderStatus()" size="small">
+          Update Status
+        </ion-button>
+      </div>
+    </div>
+
+    <ion-label class="green" *ngIf="id == 2">Ride Status : Ride Completed</ion-label>
+    <!-- <ion-label class="red" *ngIf="id == 2">Ride Cancelled by user</ion-label> -->
+  </ion-toolbar>
+</ion-footer>

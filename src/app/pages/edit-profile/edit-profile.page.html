@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" mode="md"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <div class="user_image" [style.backgroundImage]="'url(assets/imgs/user.jpg)'">
+      <img src="assets/imgs/pencil.png" class="pencil">
+    </div>
+
+    <ion-label class="header">About You</ion-label>
+
+    <div class="form_div">
+      <ion-input type="text" placeholder="First Name"></ion-input>
+      <ion-input type="text" placeholder="Last Name"></ion-input>
+      <ion-select placeholder="Gender">
+        <ion-select-option value="f">Female</ion-select-option>
+        <ion-select-option value="m">Male</ion-select-option>
+      </ion-select>
+      
+      <ion-select placeholder="Birth Year">
+        <ion-select-option value="item" *ngFor="let item of [1997,1998,1999,2000,2001,2002,2003,2004,2005]">{{item}}</ion-select-option>
+      </ion-select>
+
+      <ion-textarea rows="3" placeholder="Write your Bio.."></ion-textarea>
+
+      <ion-button (click)="onClick()" expand="block" shape="round">
+        Save Profile Info
+      </ion-button>
+    </div>
+
+    <ion-label class="header">Email</ion-label>
+
+    <div class="form_div">
+      <ion-input type="text" placeholder="Email"></ion-input>
+      <ion-button (click)="onClick()" expand="block" shape="round">
+        Save Email
+      </ion-button>
+    </div>
+
+    <ion-label class="header">Mobile Number</ion-label>
+
+    <div class="form_div">
+      <ion-select placeholder="Region">
+        <ion-select-option value="item" *ngFor="let item of ['India','Canada','Dubai']">{{item}}</ion-select-option>
+      </ion-select>
+      <ion-input type="text" placeholder="Mobile No"></ion-input>
+      <ion-button (click)="onClick()" expand="block" shape="round">
+        Save Mobile Number
+      </ion-button>
+    </div>
+
+  </div>
+</ion-content>

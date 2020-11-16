@@ -1,0 +1,142 @@
+<!-- <ion-header>
+  <div class="header_div">
+    <ion-buttons slot="start" style="position: absolute;left: 16px">
+      <ion-back-button text="" color='light' mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-label>Booking</ion-label>
+  </div>
+</ion-header> -->
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">Booking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="stepper_div">
+      <div class="div_step">
+        <div class="round_div" (click)="onClick(1)" [class.active_round]="id >= 1">
+          <ion-icon name="checkmark" class="check_icn" [class.active_icn]="id >= 1"></ion-icon>
+        </div>
+        <div class="line_div"></div>
+      </div>
+
+      <div class="div_step">
+        <div class="round_div" (click)="onClick(2)" [class.active_round]="id >= 2">
+          <ion-icon name="checkmark" class="check_icn" [class.active_icn]="id >= 2"></ion-icon>
+        </div>
+        <div class="line_div"></div>
+      </div>
+
+      <div class="div_step" style="width: 40%;">
+        <div class="round_div" (click)="onClick(3)" [class.active_round]="id >= 3">
+          <ion-icon name="checkmark" class="check_icn" [class.active_icn]="id >= 3"></ion-icon>
+        </div>
+        <div class="line_div2"></div>
+        <div class="round_div" (click)="onClick(4)" [class.active_round]="id >= 4">
+          <ion-icon name="checkmark" class="check_icn" [class.active_icn]="id >= 4"></ion-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="cal_div">
+
+    </div>
+
+    <ion-slides #mySlider [options]="slideOpts">
+
+      <ion-slide>
+        <div class="div_inner_slider">
+          <ion-label class="head_lbl ">When you are going ?</ion-label>
+
+          <div class="cal_header">
+            <ion-button (click)="back()" fill="clear">
+              <ion-icon slot="icon-only" name="chevron-back" style="font-size: 20px;color:var(--ion-color-main)">
+              </ion-icon>
+            </ion-button>
+            <ion-label class="month_lbl">{{currnetMonth}}</ion-label>
+            <ion-button (click)="next()" fill="clear">
+              <ion-icon slot="icon-only" name="chevron-forward" style="font-size: 20px;color:var(--ion-color-main)">
+              </ion-icon>
+            </ion-button>
+          </div>
+
+          <calendar [monthviewEventDetailTemplate]="template" [calendarMode]="calendar.mode"
+            [currentDate]="calendar.currentDate" (onCurrentDateChanged)="onCurrentDateChanged($event)">
+          </calendar>
+
+          <ion-button (click)="onslide2()" class="nxt_btn" shape="round">
+            Next <ion-icon slot="end" name="arrow-forward" style="font-size: 20px;"></ion-icon>
+          </ion-button>
+
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="div_inner_slider">
+          <ion-label class="head_lbl ">What time will you <br> pick passaengers up ?</ion-label>
+
+          <div style="margin-top: 50px;">
+            <ion-datetime display-format="hh:mm A" value="12:00"></ion-datetime>
+          </div>
+
+          <ion-button (click)="onslide2()" class="nxt_btn" shape="round" style="margin-top: 60px;">
+            Next <ion-icon slot="end" name="arrow-forward" style="font-size: 20px;"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="div_inner_slider">
+          <ion-label class="head_lbl ">So how many passengers <br> can you take ?</ion-label>
+          <div class="seat_div">
+
+            <ion-button class="add_btn" (click)="minus()" fill="clear" [disabled]="m_btn_dis">
+              <ion-icon slot="icon-only" name="remove-circle-outline"></ion-icon>
+            </ion-button>
+
+            <ion-label class="ip">{{no_seat}}</ion-label>
+
+            <ion-button class="add_btn" (click)="plus()" fill="clear" [disabled]="p_btn_dis">
+              <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+            </ion-button>
+
+          </div>
+
+          <ion-button (click)="onslide2()" class="nxt_btn" shape="round" style="margin-top: 60px;">
+            Next <ion-icon slot="end" name="arrow-forward" style="font-size: 20px;"></ion-icon>
+          </ion-button>
+
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="div_inner_slider">
+          <ion-label class="simple_lbl">This is our recommended price per seat. Is it Ok for you ? </ion-label>
+
+          <ion-input class="ip_lbl" value="100"></ion-input>
+
+          <div class="loc_div">
+            <ion-label>Bhavnagar </ion-label> >> <ion-label> Ahmedabad</ion-label>
+          </div>
+
+          <ion-button (click)="goToHome()" class="nxt_btn" shape="round" style="margin-top: 60px;">
+            Next <ion-icon slot="end" name="arrow-forward" style="font-size: 20px;"></ion-icon>
+          </ion-button>
+
+          <ion-button class="agree_btn" (click)="dont_agree()" expand="block" fill="clear" shape="round">
+            I Don't Agree
+          </ion-button>
+
+        </div>
+      </ion-slide>
+
+    </ion-slides>
+
+  </div>
+</ion-content>

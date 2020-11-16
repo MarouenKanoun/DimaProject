@@ -1,0 +1,26 @@
+<ion-content>
+  <div class="main_content_div">
+
+
+    <div class="shape_div1"></div>
+    <div class="shape_div2"></div>
+
+    <!-- <img src="assets/imgs/car.png" class="logo_image"> -->
+    <ion-label class="protitle">Carpool</ion-label>
+    <ion-label class="head_lbl">Sign Up</ion-label>
+
+    <div class="form_div">
+      <ion-input type="text" placeholder="First Name"></ion-input>
+      <ion-input type="text" placeholder="Last Name"></ion-input>
+      <ion-input type="text" placeholder="Email ID"></ion-input>
+      <ion-input type="text" placeholder="Password"></ion-input>
+      <ion-input type="text" placeholder="Mobile No"></ion-input>
+      <ion-button class="login_btn" expand="block" (click)="goToRides()">Sign Up</ion-button>
+    </div>
+
+    <ion-button class="bottom_lbl" (click)="goToLogin()" expand="block" fill="clear">
+      Back to Login
+    </ion-button>
+
+  </div>
+</ion-content>

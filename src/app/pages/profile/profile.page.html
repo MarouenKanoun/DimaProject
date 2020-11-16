@@ -1,0 +1,108 @@
+<ion-content>
+  <div class="main_content_div">
+    <div class="blue_div">
+
+      <div style="padding-top: 80px;">
+        <div class="user_image" [style.backgroundImage]="'url(assets/imgs/user.jpg)'"></div>
+        <ion-label class="username">Jonh Doe</ion-label>
+      </div>
+
+      <div class="segment_div">
+        <ion-row>
+          <ion-col size="6" [class.active]="seg_id == 1" (click)="changeSegment(1)">Details</ion-col>
+          <ion-col size="6" [class.active]="seg_id == 2" (click)="changeSegment(2)">Account</ion-col>
+        </ion-row>
+      </div>
+    </div>
+
+    <div class="white_div">
+
+      <div class="detail" *ngIf="seg_id == 1">
+
+        <div class="about_detail">
+          <ion-label class="about">About You</ion-label>
+          <ion-label class="blue_lbl" (click)="goToEditProfile()">Write my mini bio</ion-label>
+          <ion-label class="blue_lbl" (click)="goToPreferences()">Add my preferences</ion-label>
+        </div>
+
+        <div class="line_div"></div>
+
+        <div class="about_detail">
+          <ion-label class="about">Verification</ion-label>
+
+          <ion-button class="menu_btn" fill="clear">
+            <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+          </ion-button>
+
+          <ion-label class="blue_lbl" (click)="goToVerification()">Verify my ID</ion-label>
+
+          <div class="verify_lbl">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            <ion-label>&nbsp;&nbsp;&nbsp;+ 91 9876545643</ion-label>
+          </div>
+
+          <ion-label class="blue_lbl">Verify example@gmail.com</ion-label>
+
+          <div class="verify_lbl">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            <ion-label>&nbsp;&nbsp;&nbsp;76 Facebook Friends</ion-label>
+          </div>
+
+        </div>
+
+        <div class="line_div"></div>
+
+        <div class="about_detail">
+          <ion-label class="about">Car</ion-label>
+          <ion-label class="blue_lbl" (click)="goToAddCar()">Add a car</ion-label>
+        </div>
+
+        <div class="line_div"></div>
+
+        <ion-button (click)="goTopublicProfile()" class="profile" expand="block" fill="clear">
+          See my public Profile
+        </ion-button>
+
+      </div>
+
+      <div class="account" *ngIf="seg_id == 2">
+
+        <div class="about_detail">
+          <ion-label class="about">Your Stats</ion-label>
+          <ion-label class="blue_lbl">See rating you left</ion-label>
+        </div>
+
+        <div class="about_detail">
+          <ion-label class="about">Preferences</ion-label>
+          <ion-label class="blue_lbl">Nofification & Communication</ion-label>
+          <ion-label class="blue_lbl">Change Password</ion-label>
+          <ion-label class="blue_lbl">Postal Code</ion-label>
+
+        </div>
+
+        <div class="about_detail">
+          <ion-label class="about">Money</ion-label>
+          <ion-label class="blue_lbl">Available funds</ion-label>
+          <ion-label class="blue_lbl">Payments</ion-label>
+          <ion-label class="blue_lbl">Bank Details</ion-label>
+          <ion-label class="blue_lbl">Past Transfer</ion-label>
+        </div>
+
+        <div class="about_detail">
+          <ion-label class="about">About</ion-label>
+          <ion-label class="blue_lbl">Help</ion-label>
+          <ion-label class="blue_lbl">Terms & Conditions</ion-label>
+          <ion-label class="blue_lbl">Privacy Policy</ion-label>
+          <ion-label class="blue_lbl">Licences</ion-label>
+        </div>
+
+        <ion-button (click)="onLogout()" class="profile" expand="block" fill="clear">
+          LOG OUT
+        </ion-button>
+
+      </div>
+
+    </div>
+
+  </div>
+</ion-content>
